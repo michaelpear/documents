@@ -19,23 +19,23 @@ Metronic theme currently has 12 different themes and AspNet Zero includes them a
 * Go to **src-> app -> shared -> layout** folder
   * Go to **themes** folder. Delete **theme2** folder	
   * Go to **theme-selection** folder. Open `theme-selection-panel.component.html` and delete Theme2 code parts.
+
+* Go to **src -> assets -> common -> styles -> themes** folder and delete folder for theme2.
+* Go to **src -> assets -> metronic -> themes** folder and delete folder for theme2.
   
-* Go to **src-> app -> shared -> helper** folder. Open `DynamicResourceHelpers.ts` and delete Theme2 code parts.
+* Go to **src-> shared -> helpers** folder. Open `ThemeAssetContributorFactory.ts` and delete Theme2 code parts.
 
-* Go to **src -> app -> admin** folder
+* Go to **src -> app -> admin -> ui-customization** folder
 
-  * Open `admin.module.ts`  and delete Theme2 code parts.
-  * Go to **ui-customization** folder
-    * Delete `theme2-theme-ui-settings.component.ts`.
-    * Delete `theme2-theme-ui-settings.component.html`.
-    * Open `ui-customization.component.html` and delete Theme2 code parts.
+  * Delete `theme2-theme-ui-settings.component.ts`.
+  * Delete `theme2-theme-ui-settings.component.html`.
+  * Open `ui-customization.component.html` and delete Theme2 code parts.
+  * Open `ui-customization.module.ts` and delete Theme2 code parts.
 
 * Go to **src -> app** . Open `app.module.ts` and delete Theme2 code parts.
 
 * Go to **src -> app**. Open `app.component.html` and delete Theme2 code parts.
 
-* Open `bundles.js` and delete Theme2 bundles.
+* Open `bundles.json` and delete Theme2 bundles.
 
-
-
-Just note that, if you are deleting a theme on an already published application, don't forget to delete records with the name equals to "**App.UiManagement.Theme**" and name starts with "**Theme2.***" in AbpSettings table. 
+Just note that, if you are deleting a theme on an already published application, don't forget to delete records from the database with the name equals to "**App.UiManagement.Theme**" and name starts with "**Theme2.***" in AbpSettings table. 
